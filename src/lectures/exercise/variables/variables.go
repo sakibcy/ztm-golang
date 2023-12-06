@@ -25,4 +25,29 @@ package main
 import "fmt"
 
 func main() {
+	var myName = "Dora"
+	fmt.Println("my name is: ", myName)
+
+	var name string = "Nobi"
+	fmt.Println("name = ", name)
+
+	userName := "Doraemon" // create and assign
+	fmt.Println("username: ", userName)
+
+	var sum int // default value is 0
+	fmt.Println(sum)
+
+	part1, part2 := 3, 4
+	fmt.Println("part 1 is:", part1, "part 2 is:", part2)
+
+	// ok, error
+	part3, part2 := 6, 5
+	fmt.Println(part3, part2)
+
+	var (
+		id    = 30
+		email = "e@e.com"
+	)
+
+	fmt.Println("id:", id, "email:", email)
 }
