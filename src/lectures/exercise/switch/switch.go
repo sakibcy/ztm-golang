@@ -14,4 +14,15 @@ package main
 import "fmt"
 
 func main() {
+	result := 1
+
+	switch result {
+	case 10, 1:
+		fmt.Println("1")
+		// fallthrough // will continue checking the next case
+	case 2:
+		fmt.Println("2")
+	default:
+		fmt.Println("20")
+	}
 }
