@@ -45,9 +45,27 @@ func accessDenied() {
 	fmt.Println("Denied")
 }
 
+func average(x, y, z int) int {
+	return (x + y + z)
+}
+
 func main() {
 	// The day and role. Change these to check your work.
-	today, role := Tuesday, Guest
+	// today, role := Tuesday, Guest
 
-	accessGranted()
+	// accessGranted()
+
+	quiz1, quiz2, quiz3 := 5, 8, 9
+
+	if quiz1 > quiz2 {
+		fmt.Println("Quiz 1 is greater")
+	} else if quiz1 < quiz3 {
+		fmt.Println("Quiz 1 is less then Quiz 2")
+	} else {
+		fmt.Println("Nothing happed")
+	}
+
+	if average(quiz1, quiz2, quiz3) > 10 {
+		fmt.Println("Average is greater then 10")
+	}
 }
