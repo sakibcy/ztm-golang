@@ -18,6 +18,32 @@ package main
 
 import "fmt"
 
-func main() {
+type Room struct {
+	name    string
+	cleaned bool
+}
 
+func isCleaned(rooms [4]Room) {
+	for i := 0; i < len(rooms); i++ {
+		room := rooms[i]
+		if room.cleaned {
+			fmt.Println(room.name, "is celaned")
+		} else {
+			fmt.Println(room.name, "is not cleaned")
+		}
+	}
+}
+
+func main() {
+	rooms := [...]Room{
+		{name: "waiting"},
+		{name: "office"},
+		{name: "reception"},
+		{name: "reception"},
+	}
+
+	isCleaned(rooms)
+
+	rooms[0].cleaned = true
+	isCleaned(rooms)
 }
