@@ -16,7 +16,24 @@ package main
 
 import "fmt"
 
-type Part string
+func printRoute(slice []string) {
+	fmt.Println()
+	for i := 0; i < len(slice); i++ {
+		element := slice[i]
+		fmt.Println(element)
+	}
+}
 
 func main() {
+	route := []string{"Home", "Grocery Store", "Department Store"}
+	printRoute(route)
+
+	route = append(route, "Home")
+	printRoute(route)
+
+	route = append(route, route...)
+	printRoute(route)
+
+	route = route[1:2]
+	printRoute(route)
 }
