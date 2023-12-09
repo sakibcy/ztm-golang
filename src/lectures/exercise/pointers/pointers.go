@@ -18,6 +18,22 @@ package main
 
 import "fmt"
 
-func main() {
+func increament(x *int) {
+	*x += 1
+}
 
+func main() {
+	value := 10
+
+	// var valuePtr *int
+	// valuePtr = &value
+
+	valuePtr := &value
+
+	fmt.Println(&value)
+	fmt.Println(*valuePtr)
+
+	x := 2
+	increament(&x)
+	fmt.Println(x)
 }
