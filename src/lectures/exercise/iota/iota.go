@@ -16,12 +16,37 @@ package main
 
 import "fmt"
 
+const (
+	Online = iota
+	Offline
+	Member
+	Age
+)
+
+// starts at 3
+const (
+	Hello = iota + 3 // 3 = i
+	i4               // 4
+	i5               // 5
+)
+
+const (
+	s1 = iota // 0
+	_         // 1 (skip)
+	_         // 2 (skip)
+	s3        // 3
+	s4        // 4
+)
+
 func main() {
-	fmt.Println(add.calculate(2, 2)) // = 4
+	// iota is like enum in other languages
+	fmt.Println(i4)
 
-	fmt.Println(sub.calculate(10, 3)) // = 7
+	// fmt.Println(add.calculate(2, 2)) // = 4
 
-	fmt.Println(mul.calculate(3, 3)) // = 9
+	// fmt.Println(sub.calculate(10, 3)) // = 7
 
-	fmt.Println(div.calculate(100, 2)) // = 50
+	// fmt.Println(mul.calculate(3, 3)) // = 9
+
+	// fmt.Println(div.calculate(100, 2)) // = 50
 }
